@@ -43,7 +43,7 @@
 
 <main class="flex-grow py-16 px-4 sm:px-8 bg-gray-900 text-gray-100">
     <section id="team" class="max-w-screen-xl mx-auto">
-        <h2 class="text-4xl font-extrabold mb-12 text-center text-white">Team Wiki</h2>
+        <h2 class="text-4xl font-extrabold mb-12 text-center text-white">Our Team Portfolio</h2>
         <div class="space-y-6">
             {#each teamMembers as member}
                 <div
