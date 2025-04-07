@@ -1,6 +1,6 @@
 <footer class="bg-gray-800 text-gray-300 py-4 mt-8">
   <div class="max-w-screen-xl mx-auto px-4 text-center">
-    <p>&copy; {new Date().getFullYear()} Our Portfolio. All rights reserved.</p>
+    <p>&copy; {new Date().getFullYear()} Portfol.io All rights reserved.</p>
     <p>
       <a href="/privacy" class="text-blue-400 hover:underline">Privacy Policy</a> | 
       <a href="/terms" class="text-blue-400 hover:underline">Terms of Service</a>

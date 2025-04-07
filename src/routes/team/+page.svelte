@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { fade } from 'svelte/transition'; // Import the fade transition
     import Footer from '$lib/components/Footer.svelte';
     import NavBar from '../../lib/components/NavBar.svelte';
 
@@ -41,7 +42,11 @@
 
 <NavBar />
 
-<main class="flex-grow py-16 px-4 sm:px-8 bg-gray-900 text-gray-100">
+<main
+    class="flex-grow py-16 px-4 sm:px-8 bg-gray-900 text-gray-100"
+    in:fade={{ duration: 300 }}
+    out:fade={{ duration: 300 }}
+>
     <section id="team" class="max-w-screen-xl mx-auto">
         <h2 class="text-4xl font-extrabold mb-12 text-center text-white">Our Team Portfolio</h2>
         <div class="space-y-6">
@@ -51,7 +56,11 @@
                     on:click={() => toggleExpand(member.id)}
                 >
                     <div class="flex items-center">
-                        <img src={member.image} alt={member.name} class="rounded-xl w-24 h-24 sm:w-32 sm:h-32 object-cover mr-4 sm:mr-6 shadow-md">
+                        <img
+                            src={member.image}
+                            alt={member.name}
+                            class="rounded-xl w-24 h-24 sm:w-32 sm:h-32 object-cover mr-4 sm:mr-6 shadow-md"
+                        >
                         <div>
                             <h3 class="text-xl sm:text-2xl font-semibold text-white">{member.name}</h3>
                             <p class="text-xs sm:text-sm text-gray-400">{member.role}</p>
