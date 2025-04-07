@@ -5,7 +5,7 @@
 
 <NavBar />
 
-<main class="flex flex-col items-center px-6 py-12 bg-gray-50 dark:bg-gray-900 min-h-screen text-gray-800 dark:text-gray-100">
+<main class="flex flex-col items-center px-6 py-12 min-h-screen text-white">
     <h1 class="text-4xl font-extrabold mb-6">About Living in IT Era</h1>
     <section class="max-w-4xl text-lg leading-relaxed">
         <p class="mb-4">

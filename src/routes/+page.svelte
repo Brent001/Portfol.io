@@ -1,11 +1,11 @@
 <script>
     import NavBar from '../lib/components/NavBar.svelte';
     import Footer from '../lib/components/Footer.svelte'; // Import the Footer component
-  </script>
-  
-  <NavBar />
-  
-  <main class="flex-grow">
+</script>
+
+<NavBar />
+
+<main class="flex-grow">
     <!-- Hero Section -->
     <section id="hero" class="text-center py-20 bg-gray-800 text-white">
       <div class="max-w-screen-lg mx-auto">
@@ -25,17 +25,17 @@
         <h2 class="text-3xl font-bold mb-6">Meet the Team</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div class="text-center">
-            <img src="/img/img1.jpg" alt="Team Member" class="rounded-xl mx-auto mb-3">
+            <img src="/img/img1.jpg" alt="Team Member" class="rounded-xl mx-auto mb-3 w-130 h-120 object-cover">
             <h3 class="text-xl font-semibold">Irish M. Villanueva</h3>
             <p class="text-sm">BS-Tourism</p>
           </div>
           <div class="text-center">
-            <img src="https://via.placeholder.com/150" alt="Team Member" class="rounded-full mx-auto mb-4">
+            <img src="/img/img3.jpg" alt="Team Member" class="rounded-xl mx-auto mb-3 w-130 h-120 object-cover">
             <h3 class="text-xl font-semibold">Brent Kenneth O. Abrazaldo</h3>
             <p class="text-sm">BS-Computer Science</p>
           </div>
           <div class="text-center">
-            <img src="/img/img2.jpg" alt="Team Member" class="rounded-xl mx-auto mb-3">
+            <img src="/img/img2.jpg" alt="Team Member" class="rounded-xl mx-auto mb-3 w-130 h-120 object-cover">
             <h3 class="text-xl font-semibold">Shaira Embornal</h3>
             <p class="text-sm">BS-Tourism</p>
           </div>
@@ -45,4 +45,3 @@
   </main>
   
   <Footer />
-  
