@@ -13,25 +13,24 @@
 
 <main class="flex flex-col items-center px-4 py-8 min-h-screen bg-gray-900 text-white sm:px-6 sm:py-12">
     <h1 class="text-2xl font-extrabold mb-6 text-center sm:text-3xl">
-        About Living in IT Era
+        About Portfol.io
     </h1>
     <section class="max-w-lg text-sm leading-relaxed sm:max-w-3xl sm:text-base">
         <p class="mb-6" transition:fade={{ duration: 300 }}>
-            Welcome to <strong>Living in IT Era</strong>, a project dedicated to exploring the transformative impact of technology on our daily lives. 
-            In this fast-paced digital age, technology has become an integral part of how we work, communicate, and live.
+            <strong>Portfol.io</strong> is more than just a platform—it's your gateway to showcasing your talent, creativity, and professional journey. 
+            Designed with innovation and simplicity in mind, Portfol.io empowers individuals, teams, and organizations to present their work in a way that truly stands out.
         </p>
         <p class="mb-6" transition:fade={{ duration: 300 }}>
-            Our mission is to provide insights into the latest trends in information technology, highlight its influence on various industries, 
-            and discuss how individuals and organizations can adapt to thrive in this ever-evolving landscape.
+            Our mission is to provide a seamless and visually captivating experience for creators and professionals. Whether you're a developer, designer, entrepreneur, or artist, 
+            Portfol.io offers the tools you need to craft a portfolio that reflects your unique identity and vision.
         </p>
         <p class="mb-6" transition:fade={{ duration: 300 }}>
-            From artificial intelligence and cloud computing to cybersecurity and digital transformation, we aim to cover a wide range of topics 
-            that shape the IT era. Whether you're a tech enthusiast, a professional, or someone curious about the role of technology in modern society, 
-            this project is for you.
+            With features like fully customizable layouts, responsive design, and intuitive navigation, Portfol.io ensures your portfolio leaves a lasting impression. 
+            Share your story, highlight your achievements, and connect with opportunities that align with your goals—all in one place.
         </p>
         <p class="mb-6" transition:fade={{ duration: 300 }}>
-            Join us as we navigate the opportunities and challenges of living in the IT era, and discover how technology can empower us to achieve 
-            more and connect in meaningful ways.
+            Join the growing community of innovators and professionals who trust Portfol.io to elevate their online presence. 
+            Take the first step toward building a portfolio that not only showcases your work but also inspires and engages your audience.
         </p>
     </section>
 </main>
