@@ -6,9 +6,38 @@
     let email = '';
     let message = '';
 
-    function handleSubmit() {
-        alert(`Thank you, ${name}! Your message has been sent.`);
-        // Add logic here to send the form data to a server or email service
+    // Access the API key from environment variables
+    const WEB3FORMS_ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
+
+    async function handleSubmit() {
+        const formData = {
+            access_key: WEB3FORMS_ACCESS_KEY,
+            name,
+            email,
+            message,
+        };
+
+        try {
+            const response = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            if (response.ok) {
+                alert('Thank you! Your message has been sent.');
+                name = '';
+                email = '';
+                message = '';
+            } else {
+                alert('Oops! Something went wrong. Please try again.');
+            }
+        } catch (error) {
+            console.error('Error submitting the form:', error);
+            alert('An error occurred. Please try again later.');
+        }
     }
 </script>
 

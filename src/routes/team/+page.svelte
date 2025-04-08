@@ -51,9 +51,10 @@
         <h2 class="text-4xl font-extrabold mb-12 text-center text-white">Team Members</h2>
         <div class="space-y-6">
             {#each teamMembers as member}
-                <div
-                    class="bg-gray-800 p-6 rounded-lg shadow-lg transition-all duration-500 cursor-pointer"
+                <button
+                    class="bg-gray-800 p-6 rounded-lg shadow-lg transition-all duration-500 cursor-pointer text-left w-full"
                     on:click={() => toggleExpand(member.id)}
+                    aria-expanded={expandedMember === member.id}
                 >
                     <div class="flex items-center">
                         <img
@@ -68,7 +69,7 @@
                         </div>
                     </div>
                     <div
-                        class={`overflow-hidden transition-all duration-500 ease-in-out ${expandedMember === member.id ? 'max-h-screen mt-4' : 'max-h-0'}`}
+                        class={`overflow-hidden transition-all ${expandedMember === member.id ? 'duration-500 ease-in-out max-h-screen mt-4' : 'duration-500 ease-in-out max-h-0'}`}
                     >
                         {#if expandedMember === member.id}
                             <div class="mt-4 text-sm sm:text-base text-gray-300">
@@ -83,7 +84,7 @@
                             </div>
                         {/if}
                     </div>
-                </div>
+                </button>
             {/each}
         </div>
     </section>
