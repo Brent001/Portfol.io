@@ -1,4 +1,4 @@
-﻿# 🌐 Portfol.io - Your Gateway to Innovation
+﻿# 🌐 Portfol.io - Our Team Portfolio
 
 Welcome to **Portfol.io**, a modern and visually stunning portfolio website designed to showcase the creativity and expertise of a passionate team of developers and professionals. This project is built with **Svelte**, ensuring a fast, responsive, and seamless user experience.
 
