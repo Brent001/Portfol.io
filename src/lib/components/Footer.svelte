@@ -1,4 +1,4 @@
-<footer class="bg-gray-800 text-gray-300 py-4 mt-8">
+<footer class="bg-gray-800 text-gray-300 py-2 mt-8">
   <div class="max-w-screen-xl mx-auto px-4 text-center">
     <p>&copy; {new Date().getFullYear()} Portfol.io All rights reserved.</p>
     <p>
@@ -11,8 +11,8 @@
 <style>
   footer {
     color: #e2e8f0; /* Tailwind's gray-300 */
-    padding: 1rem 0; /* Equivalent to py-4 */
-    margin-top: 2rem; /* Equivalent to mt-8 */
+    padding: 0.5rem 0; /* Reduced padding */
+    margin-top: 0.5rem; /* Equivalent to mt-8 */
   }
 
   footer a {

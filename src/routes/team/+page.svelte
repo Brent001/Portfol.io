@@ -48,7 +48,7 @@
     out:fade={{ duration: 300 }}
 >
     <section id="team" class="max-w-screen-xl mx-auto">
-        <h2 class="text-4xl font-extrabold mb-12 text-center text-white">Team Members</h2>
+        <h2 class="text-3xl font-extrabold mb-12 text-center text-white">Team Members</h2>
         <div class="space-y-6">
             {#each teamMembers as member}
                 <button
