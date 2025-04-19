@@ -24,6 +24,12 @@
     };
 </script>
 
+<svelte:head>
+    <title>About Brent Kenneth O. Abrazaldo</title>
+    <meta name="description" content="Learn more about Brent Kenneth O. Abrazaldo, a BS-Computer Science student with a passion for software development." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</svelte:head>
+
 <NavBar />
 
 <main class="flex-grow py-8 px-4 sm:px-8 bg-gray-900 text-gray-100">
@@ -41,7 +47,7 @@
                     />
                 </div>
             </div>
-            <h1 class="text-2xl sm:text-4xl font-bold text-white mt-4 sm:mt-6">{member.name}</h1>
+            <h1 class="text-xl sm:text-3xl font-bold text-white mt-4 sm:mt-6">{member.name}</h1>
             <p class="text-base sm:text-lg text-gray-400 mt-2">{member.role}</p>
         </div>
 
@@ -79,6 +85,32 @@
                     <span><strong>College:</strong> {member.education.college}</span>
                 </li>
             </ul>
+
+            <!-- Go Back Icon -->
+            <div class="mt-8 text-left">
+                <button
+                    type="button"
+                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm p-2.5 text-center inline-flex items-center me-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 border- border-transparent hover:border-blue-500 focus:border-blue-500"
+                    on:click={() => window.history.back()}
+                >
+                    <svg
+                        class="w-5 h-5"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 14 10"
+                    >
+                        <path
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M1 5h12m0 0L9 1m4 4L9 9"
+                        />
+                    </svg>
+                    <span class="ml-2">Back</span>
+                </button>
+            </div>
         </div>
     </section>
 </main>
@@ -107,9 +139,9 @@
             padding: 2px; /* Thinner border for better mobile appearance */
             background: radial-gradient(
                 circle,
-                #ff1d50,
-                #2196f3,
-                #ff1d50
+                #EB459E,
+                #5865F2,
+                #00C2FF
             );
             background-size: 200% 200%;
             animation: pulse-border 4s ease-in-out infinite;

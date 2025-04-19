@@ -61,6 +61,11 @@
     }
 </style>
 
+<svelte:head>
+    <title>Portfol.io</title>
+    <meta name="description" content="Welcome to Portfol.io, a team of passionate developers creating innovative and impactful projects." />
+</svelte:head >
+
 <NavBar />
 
 <main class="flex-grow">
@@ -87,17 +92,23 @@
             </h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="text-center" in:fade={{ duration: 500 }}>
-                    <img src="/img/img1.jpg" alt="Team Member" class="rounded-xl mx-auto mb-3 w-full sm:w-48 h-auto object-cover">
+                    <a href="/team/irish">
+                        <img src="/img/img1.jpg" alt="Irish M. Villanueva" class="rounded-xl mx-auto mb-3 w-full sm:w-48 h-auto object-cover">
+                    </a>
                     <h3 class="text-lg font-semibold sm:text-xl">Irish M. Villanueva</h3>
                     <p class="text-sm sm:text-base">BS-Tourism</p>
                 </div>
                 <div class="text-center" in:fade={{ duration: 500 }}>
-                    <img src="/img/img3.jpg" alt="Team Member" class="rounded-xl mx-auto mb-3 w-full sm:w-48 h-auto object-cover">
+                    <a href="/team/brent">
+                        <img src="/img/img3.jpg" alt="Brent Kenneth O. Abrazaldo" class="rounded-xl mx-auto mb-3 w-full sm:w-48 h-auto object-cover">
+                    </a>
                     <h3 class="text-lg font-semibold sm:text-xl">Brent Kenneth O. Abrazaldo</h3>
                     <p class="text-sm sm:text-base">BS-Computer Science</p>
                 </div>
                 <div class="text-center" in:fade={{ duration: 500 }}>
-                    <img src="/img/img2.jpg" alt="Team Member" class="rounded-xl mx-auto mb-3 w-full sm:w-48 h-auto object-cover">
+                    <a href="/team/shaira">
+                        <img src="/img/img2.jpg" alt="Shaira Embornal" class="rounded-xl mx-auto mb-3 w-full sm:w-48 h-auto object-cover">
+                    </a>
                     <h3 class="text-lg font-semibold sm:text-xl">Shaira Embornal</h3>
                     <p class="text-sm sm:text-base">BS-Tourism</p>
                 </div>

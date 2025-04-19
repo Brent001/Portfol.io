@@ -8,22 +8,28 @@
         role: "BS-Tourism",
         image: "/img/img2.jpg",
         description: "Shaira excels in customer relations and hospitality, ensuring seamless experiences for clients.",
-        skills: ["Customer Relations", "Hospitality Management", "Communication"],
+        skills: ["Good Communication", "Teamwork", "Problem-Solving"],
         portfolio: "Shaira has played a key role in maintaining strong client relationships and ensuring project success.",
+        hobby: "Artistic activities, community service, photography, and gaming.",
+        workExperience: "None",
+        address: "Longos Proper, San Fabian, Pangasinan",
         education: {
-            elementary: "San Fabian Elementary School",
-            highschool: "San Fabian National High School",
-            seniorHighschool: "San Fabian Senior High School",
+            elementary: "Longos Proper Elementary School",
+            highschool: "Mangaldan National High School",
             college: "Metro Dagupan Colleges"
         },
         educationLogos: {
             elementary: "/img/logos/san-fabian-elementary.png",
-            highschool: "/img/logos/san-fabian-highschool.png",
-            seniorHighschool: "/img/logos/san-fabian-senior-highschool.png",
+            highschool: "/img/logos/mangaldan-national-highschool.png",
             college: "/img/logos/metro-dagupan-colleges.png"
         }
     };
 </script>
+ <svelte:head>
+    <title>About Shaira Embornal</title>
+    <meta name="description" content="Learn more about Shaira Embornal, a BS-Tourism student with a passion for customer relations and hospitality." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</svelte:head>
 
 <NavBar />
 
@@ -42,14 +48,28 @@
                     />
                 </div>
             </div>
-            <h1 class="text-2xl sm:text-4xl font-bold text-white mt-4 sm:mt-6">{member.name}</h1>
+            <h1 class="text-xl sm:text-3xl font-bold text-white mt-4 sm:mt-6">{member.name}</h1>
             <p class="text-base sm:text-lg text-gray-400 mt-2">{member.role}</p>
         </div>
 
         <!-- Right Column: About, Skills, Portfolio, and Education -->
         <div class="sm:col-span-2 text-gray-300">
             <h2 class="text-xl sm:text-2xl font-bold text-white">About</h2>
-            <p class="mt-2 sm:mt-4 text-sm sm:text-base">{member.description}</p>
+            <p class="mt-2 sm:mt-4 text-sm sm:text-base">
+                Hello! My name is Shaira Embornal, and I’m a 20-year-old BS-Tourism student from Longos Proper, San Fabian, Pangasinan. 
+                I’m passionate about creating meaningful connections and ensuring seamless experiences for clients. 
+                I pride myself on my excellent communication skills, teamwork, and problem-solving abilities, which have helped me grow both personally and professionally.
+            </p>
+            <p class="mt-2 sm:mt-4 text-sm sm:text-base">
+                In my free time, I enjoy artistic activities, community service, photography, and gaming. These hobbies allow me to express my creativity and give back to the community. 
+                While I don’t have formal work experience yet, I’m eager to learn and take on new challenges. I believe my proactive approach and dedication to maintaining strong relationships make me a valuable team member.
+            </p>
+
+            <h2 class="text-xl sm:text-2xl font-bold text-white mt-6 sm:mt-8">Address</h2>
+            <p class="mt-2 sm:mt-4 text-sm sm:text-base">{member.address}</p>
+
+            <h2 class="text-xl sm:text-2xl font-bold text-white mt-6 sm:mt-8">Work Experience</h2>
+            <p class="mt-2 sm:mt-4 text-sm sm:text-base">{member.workExperience}</p>
 
             <h2 class="text-xl sm:text-2xl font-bold text-white mt-6 sm:mt-8">Skills</h2>
             <ul class="list-disc list-inside mt-2 sm:mt-4 text-sm sm:text-base">
@@ -57,6 +77,9 @@
                     <li>{skill}</li>
                 {/each}
             </ul>
+
+            <h2 class="text-xl sm:text-2xl font-bold text-white mt-6 sm:mt-8">Hobbies</h2>
+            <p class="mt-2 sm:mt-4 text-sm sm:text-base">{member.hobby}</p>
 
             <h2 class="text-xl sm:text-2xl font-bold text-white mt-6 sm:mt-8">Portfolio</h2>
             <p class="mt-2 sm:mt-4 text-sm sm:text-base">{member.portfolio}</p>
@@ -70,10 +93,6 @@
                 <li class="flex items-center space-x-2 sm:space-x-4 mt-2 sm:mt-4">
                     <img src={member.educationLogos.highschool} alt="High School Logo" class="h-6 w-6 sm:h-8 sm:w-8 object-contain" />
                     <span><strong>High School:</strong> {member.education.highschool}</span>
-                </li>
-                <li class="flex items-center space-x-2 sm:space-x-4 mt-2 sm:mt-4">
-                    <img src={member.educationLogos.seniorHighschool} alt="Senior High School Logo" class="h-6 w-6 sm:h-8 sm:w-8 object-contain" />
-                    <span><strong>Senior High School:</strong> {member.education.seniorHighschool}</span>
                 </li>
                 <li class="flex items-center space-x-2 sm:space-x-4 mt-2 sm:mt-4">
                     <img src={member.educationLogos.college} alt="College Logo" class="h-6 w-6 sm:h-8 sm:w-8 object-contain" />
@@ -108,9 +127,9 @@
             padding: 2px; /* Thinner border for better mobile appearance */
             background: radial-gradient(
                 circle,
-                #ff1d50,
-                #2196f3,
-                #ff1d50
+                #EB459E,
+                #5865F2,
+                #00C2FF
             );
             background-size: 200% 200%;
             animation: pulse-border 4s ease-in-out infinite;

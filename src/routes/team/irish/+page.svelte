@@ -25,6 +25,12 @@
     };
 </script>
 
+<svelte:head>
+    <title>About Irish M. Villanueva</title>
+    <meta name="description" content="Learn more about Irish M. Villanueva, a BS-Tourism student with a passion for event planning and logistics." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</svelte:head>
+
 <NavBar />
 
 <main class="flex-grow py-8 px-4 sm:px-8 bg-gray-900 text-gray-100">
@@ -42,7 +48,7 @@
                     />
                 </div>
             </div>
-            <h1 class="text-2xl sm:text-4xl font-bold text-white mt-4 sm:mt-6">{member.name}</h1>
+            <h1 class="text-xl sm:text-3xl font-bold text-white mt-4 sm:mt-6">{member.name}</h1>
             <p class="text-base sm:text-lg text-gray-400 mt-2">{member.role}</p>
         </div>
 
@@ -80,6 +86,32 @@
                     <span><strong>College:</strong> {member.education.college}</span>
                 </li>
             </ul>
+
+            <!-- Go Back Button -->
+            <div class="mt-8 text-left">
+                <button
+                    type="button"
+                    class="bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white font-semibold text-xs sm:text-sm py-2 px-4 rounded-lg shadow-md inline-flex items-center transition duration-300"
+                    on:click={() => window.history.back()}
+                >
+                    <svg
+                        class="w-4 h-4 sm:w-5 sm:h-5 mr-2"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 14 10"
+                    >
+                        <path
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M1 5h12m0 0L9 1m4 4L9 9"
+                        />
+                    </svg>
+                    Back
+                </button>
+            </div>
         </div>
     </section>
 </main>
@@ -108,9 +140,9 @@
             padding: 2px; /* Thinner border for better mobile appearance */
             background: radial-gradient(
                 circle,
-                #ff1d50,
-                #2196f3,
-                #ff1d50
+                #EB459E,
+                #5865F2,
+                #00C2FF
             );
             background-size: 200% 200%;
             animation: pulse-border 4s ease-in-out infinite;

@@ -43,6 +43,11 @@
     }
 </script>
 
+<svelte:head>
+    <title>Team Members</title>
+    <meta name="description" content="Meet our talented team members who are passionate about creating innovative solutions." />
+</svelte:head>
+
 <NavBar />
 
 <main
