@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { fade } from 'svelte/transition'; // Import the fade transition
+    import { fade, slide } from 'svelte/transition'; // Import fade and slide transitions
     import Footer from '$lib/components/Footer.svelte';
     import NavBar from '../../lib/components/NavBar.svelte';
 
@@ -50,28 +50,28 @@
 
 <NavBar />
 
-<main
-    class="flex-grow py-8 px-4 sm:px-8 bg-gray-900 text-gray-100"
-    in:fade={{ duration: 300 }}
-    out:fade={{ duration: 300 }}
->
+<main class="flex-grow py-8 px-4 sm:px-8 bg-gray-900 text-gray-100">
     <section id="team" class="max-w-screen-xl mx-auto">
-        <h2 class="text-2xl sm:text-3xl font-extrabold mb-8 sm:mb-12 text-center text-white">Team Members</h2>
+        <h2 class="text-2xl sm:text-3xl font-extrabold mb-8 sm:mb-12 text-center text-white" in:fade={{ duration: 500 }}>
+            Team Members
+        </h2>
         <div class="space-y-4 sm:space-y-6">
             {#each teamMembers as member}
                 <button
                     class="bg-gray-800 p-4 sm:p-6 rounded-lg shadow-lg transition-all duration-500 cursor-pointer text-left w-full"
                     on:click={() => toggleExpand(member.id)}
                     aria-expanded={expandedMember === member.id}
+                    in:fade={{ duration: 300 }}
                 >
                     <div class="flex flex-col sm:flex-row items-center sm:items-start">
                         <img
                             src={member.image}
                             alt={member.name}
                             class="rounded-xl w-20 h-20 sm:w-32 sm:h-32 object-cover mb-4 sm:mb-0 sm:mr-6 shadow-md"
+                            in:fade={{ duration: 300 }}
                         >
                         <div class="flex-1">
-                            <h3 class="text-lg sm:text-xl font-semibold text-white">
+                            <h3 class="text-lg sm:text-xl font-semibold text-white" in:fade={{ duration: 300 }}>
                                 {member.name}
                             </h3>
                             <p class="text-xs sm:text-sm text-gray-400">{member.role}</p>
@@ -86,7 +86,7 @@
                         }`}
                     >
                         {#if expandedMember === member.id}
-                            <div class="mt-4 text-sm sm:text-base text-gray-300">
+                            <div class="mt-4 text-sm sm:text-base text-gray-300" in:slide={{ duration: 300 }}>
                                 <h4 class="text-base sm:text-lg font-bold text-white">Skills:</h4>
                                 <ul class="list-disc list-inside">
                                     {#each member.skills as skill}

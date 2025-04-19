@@ -1,6 +1,7 @@
 <script>
     import Footer from '$lib/components/Footer.svelte';
     import NavBar from '$lib/components/NavBar.svelte';
+    import { fade, scale } from 'svelte/transition';
 
     // Updated data for Shaira Embornal
     const member = {
@@ -37,7 +38,7 @@
     <section class="max-w-screen-lg mx-auto grid grid-cols-1 sm:grid-cols-3 gap-8">
         <!-- Left Column: Profile Picture -->
         <div class="text-center sm:col-span-1">
-            <div class="relative mx-auto w-32 h-32 sm:w-52 sm:h-52">
+            <div class="relative mx-auto w-32 h-32 sm:w-52 sm:h-52" in:scale={{ duration: 500 }}>
                 <!-- Animated Border -->
                 <div class="relative w-full h-full rounded-xl border-animation">
                     <!-- Profile Picture -->
@@ -48,8 +49,12 @@
                     />
                 </div>
             </div>
-            <h1 class="text-xl sm:text-3xl font-bold text-white mt-4 sm:mt-6">{member.name}</h1>
-            <p class="text-base sm:text-lg text-gray-400 mt-2">{member.role}</p>
+            <h1 class="text-xl sm:text-3xl font-bold text-white mt-4 sm:mt-6" in:fade={{ duration: 500 }}>
+                {member.name}
+            </h1>
+            <p class="text-base sm:text-lg text-gray-400 mt-2" in:fade={{ duration: 500 }}>
+                {member.role}
+            </p>
         </div>
 
         <!-- Right Column: About, Skills, Portfolio, and Education -->
@@ -99,6 +104,32 @@
                     <span><strong>College:</strong> {member.education.college}</span>
                 </li>
             </ul>
+
+            <!-- Add "Back" button at the bottom of the right column -->
+            <div class="mt-8 text-left">
+                <button
+                    type="button"
+                    class="bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white font-semibold text-xs sm:text-sm py-2 px-4 rounded-lg shadow-md inline-flex items-center transition duration-300"
+                    on:click={() => window.history.back()}
+                >
+                    <svg
+                        class="w-4 h-4 sm:w-5 sm:h-5 mr-2"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 14 10"
+                    >
+                        <path
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M1 5h12m0 0L9 1m4 4L9 9"
+                        />
+                    </svg>
+                    Back
+                </button>
+            </div>
         </div>
     </section>
 </main>

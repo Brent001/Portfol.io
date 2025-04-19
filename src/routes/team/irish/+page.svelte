@@ -1,6 +1,7 @@
 <script>
     import Footer from '$lib/components/Footer.svelte';
     import NavBar from '$lib/components/NavBar.svelte';
+    import { fade, scale } from 'svelte/transition';
 
     // Updated data for Irish M. Villanueva
     const member = {
@@ -37,7 +38,7 @@
     <section class="max-w-screen-lg mx-auto grid grid-cols-1 sm:grid-cols-3 gap-8">
         <!-- Left Column: Profile Picture -->
         <div class="text-center sm:col-span-1">
-            <div class="relative mx-auto w-32 h-32 sm:w-52 sm:h-52">
+            <div class="relative mx-auto w-32 h-32 sm:w-52 sm:h-52" in:scale={{ duration: 500 }}>
                 <!-- Animated Border -->
                 <div class="relative w-full h-full rounded-xl border-animation">
                     <!-- Profile Picture -->
@@ -48,8 +49,12 @@
                     />
                 </div>
             </div>
-            <h1 class="text-xl sm:text-3xl font-bold text-white mt-4 sm:mt-6">{member.name}</h1>
-            <p class="text-base sm:text-lg text-gray-400 mt-2">{member.role}</p>
+            <h1 class="text-xl sm:text-3xl font-bold text-white mt-4 sm:mt-6" in:fade={{ duration: 500 }}>
+                {member.name}
+            </h1>
+            <p class="text-base sm:text-lg text-gray-400 mt-2" in:fade={{ duration: 500 }}>
+                {member.role}
+            </p>
         </div>
 
         <!-- Right Column: About, Skills, Portfolio, and Education -->
