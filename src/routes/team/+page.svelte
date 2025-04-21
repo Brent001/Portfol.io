@@ -10,31 +10,31 @@
             id: 1,
             name: "Irish Villanueva",
             slug: "irish-m-villanueva",
-            role: "BS-Tourism",
+            role: "UI Consultant", // Updated role
             image: "/img/img1.jpg",
-            description: "Irish specializes in event planning and logistics, bringing creativity and organization to every project.",
-            skills: ["Event Planning", "Logistics Management", "Creative Problem Solving"],
-            portfolio: "Irish has successfully organized multiple events for the team, ensuring smooth execution and client satisfaction."
+            description: "Irish is a beginner UI Consultant with basic knowledge of creating visually appealing and user-friendly interfaces. She is eager to learn and improve her skills.",
+            skills: ["Basic UI Design", "Creativity", "Attention to Detail"], // Updated skills
+            portfolio: "Irish has participated in team projects, contributing her creativity and attention to detail."
         },
         {
             id: 2,
             name: "Brent Kenneth Abrazaldo",
             slug: "brent-kenneth-o-abrazaldo",
-            role: "BS-Computer Science",
+            role: "Junior Developer", // Updated role
             image: "/img/img3.jpg",
-            description: "Brent is a software developer with expertise in full-stack development and innovative problem-solving.",
-            skills: ["Full-Stack Development", "Database Management", "Problem Solving"],
-            portfolio: "Brent has developed key features for the team's projects, ensuring high performance and user satisfaction."
+            description: "Brent is a motivated junior developer with a strong focus on front-end development and some experience in back-end technologies. He is passionate about creating responsive and visually appealing web applications.",
+            skills: ["Front-End Development", "Responsive Design", "Basic Back-End Knowledge"], // Updated skills
+            portfolio: "Brent has contributed to various team projects by developing user interfaces and assisting with back-end integration."
         },
         {
             id: 3,
             name: "Shaira Embornal",
             slug: "shaira-embornal",
-            role: "BS-Tourism",
+            role: "UX and UI Consultant and Assistant", // Updated role
             image: "/img/img2.jpg",
-            description: "Shaira excels in customer relations and hospitality, ensuring seamless experiences for clients.",
-            skills: ["Customer Relations", "Hospitality Management", "Communication"],
-            portfolio: "Shaira has played a key role in maintaining strong client relationships and ensuring project success."
+            description: "Shaira is a beginner UX and UI Consultant and Assistant with basic knowledge of designing user experiences. She is enthusiastic about learning and improving her skills.",
+            skills: ["Basic UX Design", "Basic UI Design", "Communication"], // Updated skills
+            portfolio: "Shaira has assisted in team projects by providing basic design support and maintaining client relationships."
         }
     ];
 

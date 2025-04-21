@@ -5,29 +5,37 @@
 
     const member = {
         name: "Brent Kenneth O. Abrazaldo",
-        role: "BS-Computer Science",
+        role: "Junior Developer",
         image: "/img/img3.jpg",
-        description: "Brent is a software developer with expertise in full-stack development and innovative problem-solving.",
-        skills: ["Full-Stack Development", "Database Management", "Problem Solving"],
-        portfolio: "Brent has developed key features for the team's projects, ensuring high performance and user satisfaction.",
+        description: `Hello, I am Brent Kenneth O. Abrazaldo, a 20-year-old Junior Developer from Pogo, Mangaldan, Pangasinan. 
+        I specialize in front-end development and have some experience in back-end technologies. 
+        I am passionate about creating responsive and visually appealing web applications that provide seamless user experiences. 
+        My dedication to learning and improving my skills allows me to contribute effectively to team projects.`,
+        skills: ["Front-End Development", "Responsive Design", "Basic Back-End Knowledge"],
+        portfolio: "Brent has contributed to various team projects by developing user interfaces and assisting with back-end integration.",
+        workExperience: "None", // Added work experience
         education: {
             elementary: "Pogo-Palua Elementary School",
             highschool: "Mangaldan Integrated School SPED Center",
-            seniorHighschool: "Mangaldan National Highschool",
+            seniorHighschool: "Mangaldan National Highschool", // Added senior high school
             college: "Metro Dagupan Colleges"
         },
         educationLogos: {
             elementary: "/img/logos/pogo-palua-elementary.png",
             highschool: "/img/logos/mangaldan-integrated-school.png",
-            seniorHighschool: "/img/logos/mangaldan-national-highschool.png",
+            seniorHighschool: "/img/logos/mangaldan-national-highschool.png", // Added senior high school logo
             college: "/img/logos/metro-dagupan-colleges.png"
+        },
+        personalInfo: {
+            age: 20,
+            address: "Pogo, Mangaldan, Pangasinan"
         }
     };
 </script>
 
 <svelte:head>
     <title>About Brent Kenneth O. Abrazaldo</title>
-    <meta name="description" content="Learn more about Brent Kenneth O. Abrazaldo, a BS-Computer Science student with a passion for software development." />
+    <meta name="description" content="Learn more about Brent Kenneth O. Abrazaldo, a Junior Developer with a passion for front-end development and responsive design." />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </svelte:head>
 
@@ -37,7 +45,7 @@
     <section class="max-w-screen-lg mx-auto grid grid-cols-1 sm:grid-cols-3 gap-8">
         <!-- Left Column: Profile Picture -->
         <div class="text-center sm:col-span-1">
-            <div class="relative mx-auto w-36 h-36 sm:w-52 sm:h-52" in:scale={{ duration: 500 }}>
+            <div class="relative mx-auto w-32 h-32 sm:w-52 sm:h-52" in:scale={{ duration: 500 }}>
                 <!-- Animated Border -->
                 <div class="relative w-full h-full rounded-xl border-animation">
                     <!-- Profile Picture -->
@@ -56,10 +64,14 @@
             </p>
         </div>
 
-        <!-- Right Column: About, Skills, Portfolio, and Education -->
+        <!-- Right Column: About, Skills, Portfolio, Work Experience, and Education -->
         <div class="sm:col-span-2 text-gray-300">
             <h2 class="text-xl sm:text-2xl font-bold text-white">About</h2>
             <p class="mt-2 sm:mt-4 text-sm sm:text-base">{member.description}</p>
+            <p class="mt-2 sm:mt-4 text-sm sm:text-base">
+                <strong>Age:</strong> {member.personalInfo.age} <br />
+                <strong>Address:</strong> {member.personalInfo.address}
+            </p>
 
             <h2 class="text-xl sm:text-2xl font-bold text-white mt-6 sm:mt-8">Skills</h2>
             <ul class="list-disc list-inside mt-2 sm:mt-4 text-sm sm:text-base">
@@ -70,6 +82,9 @@
 
             <h2 class="text-xl sm:text-2xl font-bold text-white mt-6 sm:mt-8">Portfolio</h2>
             <p class="mt-2 sm:mt-4 text-sm sm:text-base">{member.portfolio}</p>
+
+            <h2 class="text-xl sm:text-2xl font-bold text-white mt-6 sm:mt-8">Work Experience</h2>
+            <p class="mt-2 sm:mt-4 text-sm sm:text-base">{member.workExperience}</p>
 
             <h2 class="text-xl sm:text-2xl font-bold text-white mt-6 sm:mt-8">Education</h2>
             <ul class="list-disc list-inside mt-2 sm:mt-4 text-sm sm:text-base">
@@ -91,29 +106,108 @@
                 </li>
             </ul>
 
-            <!-- Go Back Icon -->
+            <!-- Socials Section -->
+            <h2 class="text-xl sm:text-2xl font-bold text-white mt-6 sm:mt-8">Socials</h2>
+            <div class="flex items-center space-x-4 mt-4">
+                <!-- Facebook -->
+                <a
+                    href="https://www.facebook.com/brentkenneth504"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center transition duration-300"
+                    aria-label="Visit Brent's Facebook profile"
+                >
+                    <img
+                        src="https://cdn-icons-png.flaticon.com/512/733/733547.png"
+                        alt="Facebook Logo"
+                        class="w-6 h-6"
+                    />
+                </a>
+
+                <!-- GitHub -->
+                <a
+                    href="https://github.com/Brent001"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center transition duration-300"
+                    aria-label="Visit Brent's GitHub profile"
+                >
+                    <img
+                        src="https://cdn-icons-png.flaticon.com/512/733/733553.png"
+                        alt="GitHub Logo"
+                        class="w-6 h-6"
+                    />
+                </a>
+
+                <!-- Instagram -->
+                <a
+                    href="https://www.instagram.com/brentph504/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center transition duration-300"
+                    aria-label="Visit Brent's Instagram profile"
+                >
+                    <img
+                        src="https://cdn-icons-png.flaticon.com/512/733/733558.png"
+                        alt="Instagram Logo"
+                        class="w-6 h-6"
+                    />
+                </a>
+
+                <!-- SoundCloud -->
+                <a
+                    href="https://soundcloud.com/brent-kenneth-abrazaldo"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center transition duration-300"
+                    aria-label="Visit Brent's SoundCloud profile"
+                >
+                    <img
+                        src="https://cdn-icons-png.flaticon.com/512/145/145809.png"
+                        alt="SoundCloud Logo"
+                        class="w-6 h-6"
+                    />
+                </a>
+
+                <!-- YouTube -->
+                <a
+                    href="https://www.youtube.com/@brentkennethabrazaldo1387"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center transition duration-300"
+                    aria-label="Visit Brent's YouTube channel"
+                >
+                    <img
+                        src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png"
+                        alt="YouTube Logo"
+                        class="w-6 h-6"
+                    />
+                </a>
+            </div>
+
+            <!-- Go Back Button -->
             <div class="mt-8 text-left">
                 <button
                     type="button"
-                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm p-2.5 text-center inline-flex items-center me-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 border- border-transparent hover:border-blue-500 focus:border-blue-500"
+                    class="bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white font-semibold text-xs sm:text-sm py-2 px-4 rounded-lg shadow-md inline-flex items-center transition duration-300"
                     on:click={() => window.history.back()}
                 >
                     <svg
-                        class="w-5 h-5"
+                        class="w-4 h-4 sm:w-5 sm:h-5 mr-2"
                         aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
-                        viewBox="0 0 14 10"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        stroke-width="2"
                     >
                         <path
-                            stroke="currentColor"
                             stroke-linecap="round"
                             stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M1 5h12m0 0L9 1m4 4L9 9"
+                            d="M11 17l-5-5m0 0l5-5m-5 5h12"
                         />
                     </svg>
-                    <span class="ml-2">Back</span>
+                    Back
                 </button>
             </div>
         </div>

@@ -8,12 +8,12 @@
         name: "Shaira Embornal",
         role: "BS-Tourism",
         image: "/img/img2.jpg",
-        description: "Shaira excels in customer relations and hospitality, ensuring seamless experiences for clients.",
-        skills: ["Good Communication", "Teamwork", "Problem-Solving"],
+        description: `Hello! My name is Shaira Embornal, and I’m a 20-year-old BS-Tourism student from Longos Proper, San Fabian, Pangasinan. 
+        I’m passionate about creating meaningful connections and ensuring seamless experiences for clients. 
+        I pride myself on my excellent communication skills, teamwork, and problem-solving abilities, which have helped me grow both personally and professionally.`,
+        skills: ["Basic UX Design", "Basic UI Design", "Communication"], // Updated skills
         portfolio: "Shaira has played a key role in maintaining strong client relationships and ensuring project success.",
-        hobby: "Artistic activities, community service, photography, and gaming.",
-        workExperience: "None",
-        address: "Longos Proper, San Fabian, Pangasinan",
+        workExperience: "None", // Added work experience
         education: {
             elementary: "Longos Proper Elementary School",
             highschool: "Mangaldan National High School",
@@ -23,10 +23,16 @@
             elementary: "/img/logos/san-fabian-elementary.png",
             highschool: "/img/logos/mangaldan-national-highschool.png",
             college: "/img/logos/metro-dagupan-colleges.png"
-        }
+        },
+        personalInfo: {
+            age: 20,
+            address: "Longos Proper, San Fabian, Pangasinan"
+        },
+        hobby: "Artistic activities, community service, photography, and gaming."
     };
 </script>
- <svelte:head>
+
+<svelte:head>
     <title>About Shaira Embornal</title>
     <meta name="description" content="Learn more about Shaira Embornal, a BS-Tourism student with a passion for customer relations and hospitality." />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -57,24 +63,14 @@
             </p>
         </div>
 
-        <!-- Right Column: About, Skills, Portfolio, and Education -->
+        <!-- Right Column: About, Skills, Portfolio, Work Experience, and Education -->
         <div class="sm:col-span-2 text-gray-300">
             <h2 class="text-xl sm:text-2xl font-bold text-white">About</h2>
+            <p class="mt-2 sm:mt-4 text-sm sm:text-base">{member.description}</p>
             <p class="mt-2 sm:mt-4 text-sm sm:text-base">
-                Hello! My name is Shaira Embornal, and I’m a 20-year-old BS-Tourism student from Longos Proper, San Fabian, Pangasinan. 
-                I’m passionate about creating meaningful connections and ensuring seamless experiences for clients. 
-                I pride myself on my excellent communication skills, teamwork, and problem-solving abilities, which have helped me grow both personally and professionally.
+                <strong>Age:</strong> {member.personalInfo.age} <br />
+                <strong>Address:</strong> {member.personalInfo.address}
             </p>
-            <p class="mt-2 sm:mt-4 text-sm sm:text-base">
-                In my free time, I enjoy artistic activities, community service, photography, and gaming. These hobbies allow me to express my creativity and give back to the community. 
-                While I don’t have formal work experience yet, I’m eager to learn and take on new challenges. I believe my proactive approach and dedication to maintaining strong relationships make me a valuable team member.
-            </p>
-
-            <h2 class="text-xl sm:text-2xl font-bold text-white mt-6 sm:mt-8">Address</h2>
-            <p class="mt-2 sm:mt-4 text-sm sm:text-base">{member.address}</p>
-
-            <h2 class="text-xl sm:text-2xl font-bold text-white mt-6 sm:mt-8">Work Experience</h2>
-            <p class="mt-2 sm:mt-4 text-sm sm:text-base">{member.workExperience}</p>
 
             <h2 class="text-xl sm:text-2xl font-bold text-white mt-6 sm:mt-8">Skills</h2>
             <ul class="list-disc list-inside mt-2 sm:mt-4 text-sm sm:text-base">
@@ -88,6 +84,9 @@
 
             <h2 class="text-xl sm:text-2xl font-bold text-white mt-6 sm:mt-8">Portfolio</h2>
             <p class="mt-2 sm:mt-4 text-sm sm:text-base">{member.portfolio}</p>
+
+            <h2 class="text-xl sm:text-2xl font-bold text-white mt-6 sm:mt-8">Work Experience</h2>
+            <p class="mt-2 sm:mt-4 text-sm sm:text-base">{member.workExperience}</p>
 
             <h2 class="text-xl sm:text-2xl font-bold text-white mt-6 sm:mt-8">Education</h2>
             <ul class="list-disc list-inside mt-2 sm:mt-4 text-sm sm:text-base">
@@ -105,7 +104,42 @@
                 </li>
             </ul>
 
-            <!-- Add "Back" button at the bottom of the right column -->
+            <!-- Socials Section -->
+            <h2 class="text-xl sm:text-2xl font-bold text-white mt-6 sm:mt-8">Socials</h2>
+            <div class="flex items-center space-x-4 mt-4">
+                <!-- Facebook -->
+                <a
+                    href="https://www.facebook.com/yoimiahs"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center transition duration-300"
+                    aria-label="Visit Shaira's Facebook profile"
+                >
+                    <img
+                        src="https://cdn-icons-png.flaticon.com/512/733/733547.png"
+                        alt="Facebook Logo"
+                        class="w-6 h-6"
+                    />
+                </a>
+
+                <!-- Instagram -->
+                <a
+                    href="https://instagram.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center transition duration-300"
+                    aria-label="Visit Shaira's Instagram profile"
+                >
+                    <img
+                        src="https://cdn-icons-png.flaticon.com/512/733/733558.png"
+                        alt="Instagram Logo"
+                        class="w-6 h-6"
+                    />
+                </a>
+
+            </div>
+
+            <!-- Go Back Button -->
             <div class="mt-8 text-left">
                 <button
                     type="button"
@@ -117,14 +151,14 @@
                         aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
-                        viewBox="0 0 14 10"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        stroke-width="2"
                     >
                         <path
-                            stroke="currentColor"
                             stroke-linecap="round"
                             stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M1 5h12m0 0L9 1m4 4L9 9"
+                            d="M11 17l-5-5m0 0l5-5m-5 5h12"
                         />
                     </svg>
                     Back

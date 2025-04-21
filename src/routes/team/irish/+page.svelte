@@ -8,20 +8,26 @@
         name: "Irish M. Villanueva",
         role: "BS-Tourism",
         image: "/img/img1.jpg",
-        description: "Irish specializes in event planning and logistics, bringing creativity and organization to every project.",
-        skills: ["Event Planning", "Logistics Management", "Creative Problem Solving"],
-        portfolio: "Irish has successfully organized multiple events for the team, ensuring smooth execution and client satisfaction.",
+        description: `Hi, my name is Villanueva Irish M. I'm a 19-year-old BS-Tourism student from Guesang, Mangaldan, Pangasinan.
+        I am a passionate and driven tourism student with a strong interest in client service, travel planning, and hospitality. 
+        I enjoy working in teams and am always ready to face challenges with a positive attitude. I value good communication, creativity, 
+        and problem-solving, which I believe are essential in the tourism industry.`,
+        skills: ["Basic UI Design", "Creativity", "Attention to Detail"], // Updated skills
+        portfolio: "Irish has successfully organized multiple events for the team, contributing her creativity and attention to detail.",
+        workExperience: "None", // Added work experience
         education: {
-            elementary: "San Fabian Elementary School",
-            highschool: "San Fabian National High School",
-            seniorHighschool: "San Fabian Senior High School",
+            elementary: "Guesang Elementary School",
+            highschool: "Mangaldan National High School",
             college: "Metro Dagupan Colleges"
         },
         educationLogos: {
-            elementary: "/img/logos/san-fabian-elementary.png",
-            highschool: "/img/logos/san-fabian-highschool.png",
-            seniorHighschool: "/img/logos/san-fabian-senior-highschool.png",
+            elementary: "/img/logos/guesang-elementary.png",
+            highschool: "/img/logos/mangaldan-national-highschool.png",
             college: "/img/logos/metro-dagupan-colleges.png"
+        },
+        personalInfo: {
+            age: 19,
+            address: "Guesang, Mangaldan, Pangasinan"
         }
     };
 </script>
@@ -57,10 +63,14 @@
             </p>
         </div>
 
-        <!-- Right Column: About, Skills, Portfolio, and Education -->
+        <!-- Right Column: About, Skills, Portfolio, Work Experience, and Education -->
         <div class="sm:col-span-2 text-gray-300">
             <h2 class="text-xl sm:text-2xl font-bold text-white">About</h2>
             <p class="mt-2 sm:mt-4 text-sm sm:text-base">{member.description}</p>
+            <p class="mt-2 sm:mt-4 text-sm sm:text-base">
+                <strong>Age:</strong> {member.personalInfo.age} <br />
+                <strong>Address:</strong> {member.personalInfo.address}
+            </p>
 
             <h2 class="text-xl sm:text-2xl font-bold text-white mt-6 sm:mt-8">Skills</h2>
             <ul class="list-disc list-inside mt-2 sm:mt-4 text-sm sm:text-base">
@@ -71,6 +81,9 @@
 
             <h2 class="text-xl sm:text-2xl font-bold text-white mt-6 sm:mt-8">Portfolio</h2>
             <p class="mt-2 sm:mt-4 text-sm sm:text-base">{member.portfolio}</p>
+
+            <h2 class="text-xl sm:text-2xl font-bold text-white mt-6 sm:mt-8">Work Experience</h2>
+            <p class="mt-2 sm:mt-4 text-sm sm:text-base">{member.workExperience}</p>
 
             <h2 class="text-xl sm:text-2xl font-bold text-white mt-6 sm:mt-8">Education</h2>
             <ul class="list-disc list-inside mt-2 sm:mt-4 text-sm sm:text-base">
@@ -83,14 +96,45 @@
                     <span><strong>High School:</strong> {member.education.highschool}</span>
                 </li>
                 <li class="flex items-center space-x-2 sm:space-x-4 mt-2 sm:mt-4">
-                    <img src={member.educationLogos.seniorHighschool} alt="Senior High School Logo" class="h-6 w-6 sm:h-8 sm:w-8 object-contain" />
-                    <span><strong>Senior High School:</strong> {member.education.seniorHighschool}</span>
-                </li>
-                <li class="flex items-center space-x-2 sm:space-x-4 mt-2 sm:mt-4">
                     <img src={member.educationLogos.college} alt="College Logo" class="h-6 w-6 sm:h-8 sm:w-8 object-contain" />
                     <span><strong>College:</strong> {member.education.college}</span>
                 </li>
             </ul>
+
+            <!-- Socials Section -->
+            <h2 class="text-xl sm:text-2xl font-bold text-white mt-6 sm:mt-8">Socials</h2>
+            <div class="flex items-center space-x-4 mt-4">
+                <!-- Facebook -->
+                <a
+                    href="https://www.facebook.com/profile.php?id=100075324813684"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center transition duration-300"
+                    aria-label="Visit Irish's Facebook profile"
+                >
+                    <img
+                        src="https://cdn-icons-png.flaticon.com/512/733/733547.png"
+                        alt="Facebook Logo"
+                        class="w-6 h-6"
+                    />
+                </a>
+
+                <!-- Instagram -->
+                <a
+                    href="https://instagram.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center transition duration-300"
+                    aria-label="Visit Irish's Instagram profile"
+                >
+                    <img
+                        src="https://cdn-icons-png.flaticon.com/512/733/733558.png"
+                        alt="Instagram Logo"
+                        class="w-6 h-6"
+                    />
+                </a>
+
+            </div>
 
             <!-- Go Back Button -->
             <div class="mt-8 text-left">
@@ -104,14 +148,14 @@
                         aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
-                        viewBox="0 0 14 10"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        stroke-width="2"
                     >
                         <path
-                            stroke="currentColor"
                             stroke-linecap="round"
                             stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M1 5h12m0 0L9 1m4 4L9 9"
+                            d="M11 17l-5-5m0 0l5-5m-5 5h12"
                         />
                     </svg>
                     Back
