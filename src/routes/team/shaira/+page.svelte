@@ -124,7 +124,7 @@
 
                 <!-- Instagram -->
                 <a
-                    href="https://instagram.com"
+                    href="https://www.instagram.com/_xxshyra/"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="inline-flex items-center transition duration-300"
