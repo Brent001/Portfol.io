@@ -1,5 +1,6 @@
 <script lang="ts">
     import { fade, slide } from 'svelte/transition'; // Import fade and slide transitions
+    import { cubicOut } from 'svelte/easing'; // Import cubicOut easing function
     import Footer from '$lib/components/Footer.svelte';
     import NavBar from '../../lib/components/NavBar.svelte';
 
@@ -86,7 +87,7 @@
                         }`}
                     >
                         {#if expandedMember === member.id}
-                            <div class="mt-4 text-sm sm:text-base text-gray-300" in:slide={{ duration: 300 }}>
+                            <div class="mt-4 text-sm sm:text-base text-gray-300" in:slide={{ duration: 400, easing: cubicOut }}>
                                 <h4 class="text-base sm:text-lg font-bold text-white">Skills:</h4>
                                 <ul class="list-disc list-inside">
                                     {#each member.skills as skill}

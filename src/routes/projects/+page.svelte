@@ -1,6 +1,7 @@
 <script>
     import Footer from '$lib/components/Footer.svelte';
     import NavBar from '../../lib/components/NavBar.svelte';
+    import { scale } from 'svelte/transition'; // Import scale transition
 </script>
 
 <NavBar />
@@ -22,7 +23,7 @@
     <!-- Team Projects Showcase Section -->
     <section class="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-screen-lg mx-auto">
         <!-- Team Project 1: Portfol.io Website -->
-        <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+        <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300" in:scale={{ duration: 400, start: 0.9 }} out:scale={{ duration: 300, start: 1 }}>
             <img src="/img/projects/portfol.io.png" alt="Portfol.io Website" class="w-full h-40 sm:h-48 object-cover">
             <div class="p-4 sm:p-6">
                 <h2 class="text-lg sm:text-xl font-bold text-white">Portfol.io Website</h2>
@@ -35,31 +36,25 @@
             </div>
         </div>
 
-        <!-- Team Project 2 -->
-        <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
-            <img src="/img/team-project2.jpg" alt="Team Project 2" class="w-full h-40 sm:h-48 object-cover">
+        <!-- Team Project 2: Placeholder -->
+        <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300" in:scale={{ duration: 400, start: 0.9 }} out:scale={{ duration: 300, start: 1 }}>
+            <img src="/img/projects/place-holder.webp" alt="Upcoming Project" class="w-full h-40 sm:h-48 object-cover">
             <div class="p-4 sm:p-6">
-                <h2 class="text-lg sm:text-xl font-bold text-white">Collaborative Blog Platform</h2>
+                <h2 class="text-lg sm:text-xl font-bold text-white">Upcoming Project</h2>
                 <p class="mt-2 text-sm sm:text-base text-gray-400">
-                    A blog platform built collaboratively, featuring user authentication, post creation, and commenting.
+                    This project is currently under development. Stay tuned for updates!
                 </p>
-                <a href="/projects/team-project2" class="mt-4 inline-block text-blue-400 hover:underline">
-                    View Details →
-                </a>
             </div>
         </div>
 
-        <!-- Team Project 3 -->
-        <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
-            <img src="/img/team-project3.jpg" alt="Team Project 3" class="w-full h-40 sm:h-48 object-cover">
+        <!-- Team Project 3: Placeholder -->
+        <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300" in:scale={{ duration: 400, start: 0.9 }} out:scale={{ duration: 300, start: 1 }}>
+            <img src="/img/projects/place-holder.webp" alt="Upcoming Project" class="w-full h-40 sm:h-48 object-cover">
             <div class="p-4 sm:p-6">
-                <h2 class="text-lg sm:text-xl font-bold text-white">E-Learning Platform</h2>
+                <h2 class="text-lg sm:text-xl font-bold text-white">Upcoming Project</h2>
                 <p class="mt-2 text-sm sm:text-base text-gray-400">
-                    An e-learning platform designed to provide interactive courses and quizzes for students.
+                    This project is currently under development. Stay tuned for updates!
                 </p>
-                <a href="/projects/team-project3" class="mt-4 inline-block text-blue-400 hover:underline">
-                    View Details →
-                </a>
             </div>
         </div>
     </section>

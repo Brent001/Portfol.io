@@ -1,7 +1,7 @@
 <script>
     import Footer from '$lib/components/Footer.svelte';
     import NavBar from '$lib/components/NavBar.svelte';
-    import { fade } from 'svelte/transition';
+    import { fade, scale } from 'svelte/transition'; // Import fade and scale transitions
 </script>
 
 <NavBar />
@@ -20,7 +20,7 @@
     <!-- Project Details Section -->
     <section class="mt-8 sm:mt-12 max-w-screen-lg mx-auto">
         <!-- Go Back Button -->
-        <div class="mb-6 text-left">
+        <div class="mb-6 text-left" in:fade={{ duration: 400 }}>
             <button
                 type="button"
                 class="inline-flex items-center bg-gray-700 hover:bg-gray-800 text-white font-medium py-2 px-3 rounded-md shadow-md transition duration-300"
@@ -40,23 +40,23 @@
             </button>
         </div>
 
-        <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden">
-            <img src="/img/projects/portfol.io-banner.png" alt="Portfol.io Website" class="w-full h-48 sm:h-60 object-cover">
+        <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden" in:scale={{ duration: 500, start: 0.9 }}>
+            <img src="/img/projects/portfol.io-banner.png" alt="Portfol.io Website" class="w-full h-48 sm:h-60 object-cover" in:fade={{ duration: 600 }}>
             <div class="p-4 sm:p-6">
-                <h2 class="text-lg sm:text-xl font-bold text-white">About the Project</h2>
-                <p class="mt-4 text-sm sm:text-base text-gray-300">
+                <h2 class="text-lg sm:text-xl font-bold text-white" in:fade={{ duration: 500 }}>About the Project</h2>
+                <p class="mt-4 text-sm sm:text-base text-gray-300" in:fade={{ duration: 600 }}>
                     Portfol.io is a collaborative project designed to showcase the team's creativity and technical expertise. 
                     It features a responsive design, modern UI/UX, and a structured layout to highlight individual and team contributions.
                 </p>
-                <h3 class="text-base sm:text-lg font-bold text-white mt-6">Key Features</h3>
-                <ul class="list-disc list-inside mt-4 text-sm sm:text-base text-gray-300">
+                <h3 class="text-base sm:text-lg font-bold text-white mt-6" in:fade={{ duration: 500 }}>Key Features</h3>
+                <ul class="list-disc list-inside mt-4 text-sm sm:text-base text-gray-300" in:fade={{ duration: 600 }}>
                     <li>Responsive design for all devices</li>
                     <li>Showcase of team projects and individual contributions</li>
                     <li>Modern UI/UX with smooth transitions</li>
                     <li>Built using Svelte and Tailwind CSS</li>
                 </ul>
-                <h3 class="text-base sm:text-lg font-bold text-white mt-6">Technologies Used</h3>
-                <ul class="list-disc list-inside mt-4 text-sm sm:text-base text-gray-300">
+                <h3 class="text-base sm:text-lg font-bold text-white mt-6" in:fade={{ duration: 500 }}>Technologies Used</h3>
+                <ul class="list-disc list-inside mt-4 text-sm sm:text-base text-gray-300" in:fade={{ duration: 600 }}>
                     <li>Svelte for fast and efficient rendering</li>
                     <li>Tailwind CSS for consistent and modern styling</li>
                     <li>JavaScript for interactivity</li>
@@ -64,11 +64,13 @@
                 <a
                     href="https://github.com/Brent001/Portfol.io.git"
                     target="_blank"
-                    class="mt-6 inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg shadow-md transition duration-300"
+                    rel="noopener noreferrer"
+                    class="mt-6 inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-3 sm:py-2 sm:px-4 text-sm sm:text-base rounded-lg shadow-md transition duration-300"
+                    in:scale={{ duration: 500, start: 0.9 }}
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        class="w-5 h-5 mr-2"
+                        class="w-4 h-4 sm:w-5 sm:h-5 mr-2"
                         fill="currentColor"
                         viewBox="0 0 24 24"
                     >
