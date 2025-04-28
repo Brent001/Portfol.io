@@ -25,7 +25,7 @@
             college: "/img/logos/metro-dagupan-colleges.png"
         },
         personalInfo: {
-            age: 20,
+            age: 21,
             address: "Longos Proper, San Fabian, Pangasinan"
         },
         hobby: "Artistic activities, community service, photography, and gaming."
